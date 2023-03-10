@@ -67,9 +67,16 @@ const NftItemCard = (props: NftItemCardProps) => {
 			)}
 			<div className='flex justify-between'>
 				<div className='flex flex-col'>
-					<span className='font-bold text-primary'>
+					<time
+						dateTime={
+							props.loading
+								? '0000-00-00T00:00:00.000Z'
+								: props.closingDate.toISOString()
+						}
+						className='font-bold text-primary'
+					>
 						{props.loading ? <Skeleton /> : formattedDate}
-					</span>
+					</time>
 					<span className='text-secondary'>Remaining Time</span>
 				</div>
 				<div className='flex flex-col'>

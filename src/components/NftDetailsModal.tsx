@@ -73,7 +73,12 @@ const NftDetailsModal = (props: NftDetailsModalProps) => {
 				/>
 				<div className='flex justify-between'>
 					<div className='flex flex-col'>
-						<span className='font-bold text-primary'>{formattedDate}</span>
+						<time
+							dateTime={props.closingDate.toISOString()}
+							className='font-bold text-primary'
+						>
+							{formattedDate}
+						</time>
 						<span className='text-secondary'>Remaining Time</span>
 					</div>
 					<div className='flex flex-col'>
