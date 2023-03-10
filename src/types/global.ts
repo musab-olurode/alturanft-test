@@ -12,6 +12,7 @@ export interface Order {
 
 export interface MakerAssetBundleAsset {
 	name: string;
+	description: string;
 	token_id: string;
 	image_url: string;
 	permalink: string;

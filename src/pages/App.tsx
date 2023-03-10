@@ -100,8 +100,10 @@ function App() {
 				shouldShow={!!selectedNft}
 				closingDate={new Date(selectedNft?.closing_date || new Date())}
 				description={
+					selectedNft?.maker_asset_bundle.assets[0].description ||
 					selectedNft?.maker_asset_bundle.assets[0].asset_contract
-						.description || ''
+						.description ||
+					''
 				}
 				image={selectedNft?.maker_asset_bundle.assets[0].image_url || ''}
 				name={
